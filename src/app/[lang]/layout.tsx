@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
+import { LOCALES } from "@/i18n/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,11 @@ export const metadata: Metadata = {
   title: "Eagle Cine",
   description: "Seu aplicativo de Cinema",
 };
+
+export async function generateStaticParams(){
+
+  return LOCALES.map((lang) => ({lang}))
+}
 
 export default function RootLayout({ children }: LayoutProps<"/[lang]">) {
   return (

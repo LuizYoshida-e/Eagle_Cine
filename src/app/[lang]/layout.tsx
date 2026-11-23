@@ -1,6 +1,6 @@
 import { Header } from "@/components/layout/header";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Langar } from "next/font/google";
 import "../globals.css";
 import { LOCALES } from "@/i18n/config";
 
@@ -24,14 +24,15 @@ export async function generateStaticParams(){
   return LOCALES.map((lang) => ({lang}))
 }
 
-export default function RootLayout({ children }: LayoutProps<"/[lang]">) {
+export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
+  const {lang }= await params;
   return (
     <html
       lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col px-3 py-2">
-        <Header />
+        <Header lang={lang} />
         {children}
         
       </body>

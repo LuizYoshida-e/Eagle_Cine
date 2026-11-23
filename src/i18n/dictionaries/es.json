@@ -1,0 +1,23 @@
+{
+    "common": {
+        "inicio": "Início",
+        "catalogo": "Catalogo"
+    },
+    "home": {
+        "suporteTitulo": "Nuestro catalogo con",
+        "tituloUm": "Tus peliculas",
+        "tituloDois": " favoritas",
+        "tituloTres": "aqui",
+        "subTitulo": " Explora más películas",
+        "buton": "Ver catálogo"
+    },
+    "movieCard": {
+        "fichaTecnica": "Ficha técnica",
+        "tituloOriginal": "Título original",
+        "elenco": "Elenco",
+        "lancamento": "Lanzamiento",
+        "pais": "País",
+        "classificacaoIndicativa": "Clasificación por edades",
+        "direcao": "Dirección"
+    }
+}

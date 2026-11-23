@@ -156,7 +156,7 @@ export const FILMES: readonly Filme[] = [
         pais: 'JP',
         classificacao: 'L',
         poster: '/posters/spirited-away.jpg',
-        traducoes: {
+        traducoes: {    
             'pt-BR': {
                 titulo: 'A Viagem de Chihiro',
                 sinopseCurta:

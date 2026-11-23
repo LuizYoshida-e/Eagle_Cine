@@ -1,7 +1,19 @@
 import { SeletorIdioma } from "./seletor-idioma";
+import { getDictionary, hasLocale } from '@/i18n/dictionaries'
+import { notFound } from "next/navigation";
 
-export function Header() {
+
+
+export async function Header({lang}:{lang:string}) {
+
+    if (!hasLocale(lang)) notFound()
+
+    const dict = await getDictionary(lang);
+    let inicio = dict.common.inicio
+    let catalogo = dict.common.catalogo
+
     return (
+        
         <header>
             <section className="flex justify-between items-baseline">
                 <div className="flex items-baseline">
@@ -17,7 +29,7 @@ export function Header() {
                 </div>
 
                 <div className="w-fit flex flex-row gap-5 items-center">
-                    <SeletorIdioma />
+                    <SeletorIdioma inicio={inicio} catalogo={catalogo}/>
                 </div>
 
             </section>

@@ -1,0 +1,23 @@
+{
+    "common": {
+        "inicio": "Home",
+        "catalogo": "Catalog"
+    },
+    "home": {
+        "suporteTitulo": "Our catalog with",
+        "tituloUm": "Your",
+        "tituloDois": " Favorite",
+        "tituloTres": "movies here",
+        "subTitulo": "Explore more movies",
+        "buton": "view catalog"
+    },
+    "movieCard": {
+        "fichaTecnica": "Technical details",
+        "tituloOriginal": "Original title",
+        "elenco": "Cast",
+        "lancamento": "Release date",
+        "pais": "Country",
+        "classificacaoIndicativa": "Age rating",
+        "direcao": "Director"
+    }
+}

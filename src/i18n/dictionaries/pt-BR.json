@@ -18,6 +18,7 @@
         "lancamento": "Lançamento",
         "pais": "País",
         "classificacaoIndicativa": "Classificação indicativa",
-        "direcao": "Direção"
+        "direcao": "Direção",
+        "duracao": "Duração"
     }
 }

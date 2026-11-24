@@ -20,8 +20,9 @@ export function generateStaticParams() {
 export default async function Home({ params }: PageProps<'/[lang]'>) {
 
   const { lang } = await params
-
   if (!hasLocale(lang)) notFound()
+    
+
 
   const dict = await getDictionary(lang);
 
@@ -32,11 +33,11 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
     flex-1  top-0   right-0
     " >
         <main className="flex-1">
-          <div className="mt-60 ml-10 ">
+          <div className="mt-60 ml-10 flex flex-col gap-5">
             <p>{dict.home.suporteTitulo}</p>
             <h1 className={`${bbh.className} text-7xl`}>{dict.home.tituloUm} <span className="text-amber-400">{dict.home.tituloDois}</span> {dict.home.tituloTres}</h1>
             <h2 className="text-4xl">{dict.home.subTitulo}</h2>
-            <CatalogoLink lang ={lang} className="bg-sky-200 rounded-xl py-4 px-9 my-2 flex items-center gap-3 cursor-pointer w-fit z-10">{dict.home.buton} <FiArrowRight/></CatalogoLink>
+            <CatalogoLink lang ={lang} className="bg-sky-200 rounded-xl py-4 px-9 flex items-center gap-3 cursor-pointer w-fit z-10">{dict.home.buton} <FiArrowRight/></CatalogoLink>
           </div>
         </main>
 

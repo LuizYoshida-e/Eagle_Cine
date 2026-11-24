@@ -18,6 +18,7 @@
         "lancamento": "Lanzamiento",
         "pais": "País",
         "classificacaoIndicativa": "Clasificación por edades",
-        "direcao": "Dirección"
+        "direcao": "Dirección",
+        "duracao": "Duraccion"
     }
 }

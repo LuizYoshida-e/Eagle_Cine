@@ -1,8 +1,4 @@
-export default async function Page({
-    params,
-}: PageProps<"/[lang]/filmes">) {
-
-const { lang } = await params;
+export default async function Page() {
 
 return (
     <h1>loading</h1>

@@ -26,9 +26,9 @@ export default async function Page({
 
 
     return (
-        <main className="ml-20 mt-15">
+        <main className="ml-20 mt-4">
             <section>   {/* voltar */}
-                <CatalogoLink lang={lang} className="flex items-center gap-3 text-xl mb-6 bg-emerald-200 w-fit rounded-2xl p-3">
+                <CatalogoLink lang={lang} className="flex items-center gap-3 text-xl mb-2 bg-emerald-200 w-fit rounded-2xl p-3">
                     <FiArrowLeft />Voltar
                 </CatalogoLink>
 
@@ -36,7 +36,7 @@ export default async function Page({
 
             <div className="flex gap-9">   {/* divisão do voltar */}
                 <aside>    {/* Imagem */}
-                    <img src={filme?.poster} alt={filme?.traducoes.slug} width={200} height={300} className="rounded-xl" />
+                    <img src={filme?.poster} alt={filme?.traducoes.slug} width={400} height={500} className="rounded-xl" />
                 </aside>
 
                 <section className="flex flex-col gap-5">   {/* Corpo */}
@@ -49,9 +49,9 @@ export default async function Page({
                         <span className="flex ">{filme?.tituloOriginal} </span>
                         <span>{filme?.dataLancamento}</span>
                     </div>
-                    <span className="text-[16px] flex-wrap"><p className="text-2xl">Sinopse</p>{filme?.traducoes[lang].sinopse}</span>
+                    <span className="text-[18px] flex-wrap max-w-3xl text-justify"><p className="text-2xl">Sinopse</p>{filme?.traducoes[lang].sinopse}</span>
                     <span><h3 className="flex text-[20px]">{dict.movieCard.fichaTecnica}</h3></span>
-                    <article>
+                    <article className="grid grid-cols-2 gap-6 border border-cyan-600 w-fit p-9 justify-between px-10">
                         <div>
                             <h4 className="text-[14px]">{dict.movieCard.tituloOriginal}</h4>
                             <p>{filme?.tituloOriginal}</p>
@@ -76,11 +76,14 @@ export default async function Page({
                             <h4 className="text-[14px]">{dict.movieCard.classificacaoIndicativa}</h4>
                             <p>{filme?.classificacao}</p>
                         </div>
+                        <div>
+                            <h4 className="text-[14px]">{dict.movieCard.duracao}</h4>
+                            <p>{filme?.duracaoMin}</p>
+                        </div>
                     </article>
                 </section>
             </div>
-{/*                             <p>{filme?.traducoes[lang].}</p>
- */}
+
         </main>
     )
 

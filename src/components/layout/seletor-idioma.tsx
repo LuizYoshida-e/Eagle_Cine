@@ -8,8 +8,7 @@ type Language = "pt-BR" | "en" | "es";
 
 
 
-export function SeletorIdioma({ inicio, catalogo }: { inicio: string, catalogo: string }) {
-    const { lang } = useParams<{ lang: string }>();
+export function SeletorIdioma({ inicio, catalogo, lang }: { inicio: string, catalogo: string, lang:string }) {
     const [selectedLanguage, setSelectedLanguage] = useState(lang);
     const pathname = usePathname();
     const router = useRouter();

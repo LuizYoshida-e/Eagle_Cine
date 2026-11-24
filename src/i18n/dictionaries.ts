@@ -1,3 +1,4 @@
+import { LOCALES } from './config'
 
 
 const dictionaries = {
@@ -7,6 +8,7 @@ const dictionaries = {
 }
 
 export type Locale = keyof typeof dictionaries
-export const hasLocale = (locale: string): locale is Locale =>
-    locale in dictionaries
+export function hasLocale(locale: string): locale is Locale{
+    return LOCALES.includes(locale)
+}
 export const getDictionary = async (locale: Locale) => dictionaries[locale]()

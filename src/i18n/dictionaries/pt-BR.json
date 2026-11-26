@@ -1,7 +1,9 @@
 {
     "common": {
         "inicio": "Início",
-        "catalogo": "Catalogo"
+        "catalogo": "Catálogo",
+        "quantidadefilmes" : "Foram encontrados",
+        "filmes" : "filmes"
     },
     "home": {
         "suporteTitulo": "Nosso catalogo com",
@@ -19,6 +21,43 @@
         "pais": "País",
         "classificacaoIndicativa": "Classificação indicativa",
         "direcao": "Direção",
-        "duracao": "Duração"
+        "duracao": "Duração",
+        "voltar" : "Voltar",
+        "sinopse" : "Sinopse"
+
+    },
+    "notFound":{
+        "naoEncontrado" : "Não encontrado"
+    },
+    "filtro":{
+        "filtroTitulo": "Filtros",
+        "buscaTitulo": "Busca por título",
+        "buscaTituloPlaceHolder": "Digite aqui o título",
+        "genero": "Gênero",
+        "todosGeneros": "Todos os gêneros",
+        "generos": {
+            "acao": "Ação",
+            "aventura": "Aventura",
+            "animacao": "Animação",
+            "comedia": "Comédia",
+            "crime": "Crime",
+            "drama": "Drama",
+            "fantasia": "Fantasia",
+            "ficcao": "Ficção",
+            "romance": "Romance",
+            "suspense": "Suspense"
+        },
+        "dataLancamento": "Data de lançamento",
+        "de": "De",
+        "ate": "Até",
+        "notaMinima": "Nota mínima",
+        "notaPlaceHolder": "0 a 10",
+        "duracaoMaxima": "Duração máxima (minutos)",
+        "duracaoPlaceHolder": "Ex.: 120",
+        "aplicarFiltros": "Aplicar Filtros",
+        "limparFiltros": "Limpar Filtros"
+    },
+    "catalog": {
+        "semResultados": "Nenhum resultado encontrado"
     }
 }

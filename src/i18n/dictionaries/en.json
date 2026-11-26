@@ -1,7 +1,9 @@
 {
     "common": {
         "inicio": "Home",
-        "catalogo": "Catalog"
+        "catalogo": "Catalog",
+        "quantidadefilmes": "We found",
+        "filmes": "movies"
     },
     "home": {
         "suporteTitulo": "Our catalog with",
@@ -19,6 +21,42 @@
         "pais": "Country",
         "classificacaoIndicativa": "Age rating",
         "direcao": "Director",
-        "duracao": "Duration"
+        "duracao": "Duration",
+        "voltar": "Back",
+        "sinopse": "Synopsis"
+    },
+    "notFound": {
+        "naoEncontrado": "Not found"
+    },
+    "filtro": {
+        "filtroTitulo": "Filters",
+        "buscaTitulo": "Search by title",
+        "buscaTituloPlaceHolder": "Enter a title",
+        "genero": "Genre",
+        "todosGeneros": "All genres",
+        "generos": {
+            "acao": "Action",
+            "aventura": "Adventure",
+            "animacao": "Animation",
+            "comedia": "Comedy",
+            "crime": "Crime",
+            "drama": "Drama",
+            "fantasia": "Fantasy",
+            "ficcao": "Science fiction",
+            "romance": "Romance",
+            "suspense": "Thriller"
+        },
+        "dataLancamento": "Release date",
+        "de": "From",
+        "ate": "To",
+        "notaMinima": "Minimum rating",
+        "notaPlaceHolder": "0 to 10",
+        "duracaoMaxima": "Maximum duration (minutes)",
+        "duracaoPlaceHolder": "e.g. 120",
+        "aplicarFiltros": "Apply filters",
+        "limparFiltros": "Clear filters"
+    },
+    "catalog": {
+        "semResultados": "No results found"
     }
 }

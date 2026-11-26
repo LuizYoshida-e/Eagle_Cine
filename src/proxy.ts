@@ -6,7 +6,6 @@ export default function Proxy(request: NextRequest) {
 
 
     const pathname = request.nextUrl.pathname;
-    const pathSemLang = pathname.replace(/^\/[^/]+/, "");
 
     const pathnameHasLocale = LOCALES.some(
         (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
@@ -18,9 +17,8 @@ export default function Proxy(request: NextRequest) {
         return NextResponse.next()
     }
 
-    const locale = DEFAULT_LOCALE
     const url = request.nextUrl.clone()
-    url.pathname = `/${locale}`
+    url.pathname = `/${DEFAULT_LOCALE}${pathname === "/" ? "" : pathname}`
     return NextResponse.redirect(url)
 
 

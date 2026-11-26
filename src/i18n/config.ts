@@ -7,7 +7,7 @@ export const DEFAULT_LOCALE: Locale = 'pt-BR';
 
 
 export function isLocale({lang} : {lang:Locale}){
-    if (!LOCALES)
+    if (!LOCALES.includes(lang))
         return(
     redirect("/")
     )

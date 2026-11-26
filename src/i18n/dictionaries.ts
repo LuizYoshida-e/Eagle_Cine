@@ -9,6 +9,6 @@ const dictionaries = {
 
 export type Locale = keyof typeof dictionaries
 export function hasLocale(locale: string): locale is Locale{
-    return LOCALES.includes(locale)
+    return LOCALES.some((supportedLocale) => supportedLocale === locale)
 }
 export const getDictionary = async (locale: Locale) => dictionaries[locale]()

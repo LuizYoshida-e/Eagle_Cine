@@ -13,6 +13,9 @@ export function SeletorIdioma({ inicio, catalogo, lang }: { inicio: string, cata
     const pathname = usePathname();
     const router = useRouter();
     const pathSemLang = pathname.replace(/^\/[^/]+/, "");
+    const searchParams = useSearchParams();
+    const query = searchParams.toString();
+
 
     return (
         <section className="flex  gap-6 items-center z-20">
@@ -21,9 +24,9 @@ export function SeletorIdioma({ inicio, catalogo, lang }: { inicio: string, cata
             <div className="flex w-3xs flex-row rounded-2xl border bg-transparent text-2xl justify-evenly overflow-hidden p-0.5 ml-4">
                 <button
                     type="button"
-                    className={`flex-1 cursor-pointer ${lang == "pt-BR" ? "bg-amber-200 font-bold rounded-2xl" : ""}`}
+                    className={`flex-1 cursor-pointer ${lang == "pt-BR" ? "bg-amber-200 text-black font-bold rounded-2xl" : ""}`}
                     id="pt-BR"
-                    onClick={() => { router.replace(`/pt-BR${pathSemLang}`) }}
+                    onClick={() => { router.replace(`/pt-BR${pathSemLang}${query ? `?${query}` : ""}`) }}
                 >
                     PT
                 </button>
@@ -31,16 +34,16 @@ export function SeletorIdioma({ inicio, catalogo, lang }: { inicio: string, cata
                 <button
                     type="button"
                     id="en"
-                    onClick={() => { router.replace(`/en${pathSemLang}`) }}
-                    className={`flex-1 cursor-pointer ${lang == "en" ? "bg-amber-200 font-bold rounded-2xl" : ""}`}
+                    onClick={() => { router.replace(`/en${pathSemLang}${query ? `?${query}` : ""}`) }}
+                    className={`flex-1 cursor-pointer ${lang == "en" ? "bg-amber-200 text-black font-bold rounded-2xl" : ""}`}
                 >
                     EN
                 </button>
                 <button
                     type="button"
-                    className={`flex-1 cursor-pointer ${lang == "es" ? "bg-amber-200 font-bold rounded-2xl" : ""}`}
+                    className={`flex-1 cursor-pointer ${lang == "es" ? "bg-amber-200 text-black font-bold rounded-2xl" : ""}`}
                     id="es"
-                    onClick={() => { router.replace(`/es${pathSemLang}`); }}
+                    onClick={() => { router.replace(`/es${pathSemLang}${query ? `?${query}` : ""}`) }}
                 >
                     ES
                 </button>
